@@ -47,28 +47,28 @@ public final class AnimalServiceGrpc {
   }
 
   private static volatile io.grpc.MethodDescriptor<via.sdj3.slaughterhousepart2.generated.animal.RequestText,
-      via.sdj3.slaughterhousepart2.generated.animal.ResponseText> getGetAnimalByIdMethod;
+      via.sdj3.slaughterhousepart2.generated.animal.AnimalObj> getGetAnimalByIdMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "getAnimalById",
       requestType = via.sdj3.slaughterhousepart2.generated.animal.RequestText.class,
-      responseType = via.sdj3.slaughterhousepart2.generated.animal.ResponseText.class,
+      responseType = via.sdj3.slaughterhousepart2.generated.animal.AnimalObj.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<via.sdj3.slaughterhousepart2.generated.animal.RequestText,
-      via.sdj3.slaughterhousepart2.generated.animal.ResponseText> getGetAnimalByIdMethod() {
-    io.grpc.MethodDescriptor<via.sdj3.slaughterhousepart2.generated.animal.RequestText, via.sdj3.slaughterhousepart2.generated.animal.ResponseText> getGetAnimalByIdMethod;
+      via.sdj3.slaughterhousepart2.generated.animal.AnimalObj> getGetAnimalByIdMethod() {
+    io.grpc.MethodDescriptor<via.sdj3.slaughterhousepart2.generated.animal.RequestText, via.sdj3.slaughterhousepart2.generated.animal.AnimalObj> getGetAnimalByIdMethod;
     if ((getGetAnimalByIdMethod = AnimalServiceGrpc.getGetAnimalByIdMethod) == null) {
       synchronized (AnimalServiceGrpc.class) {
         if ((getGetAnimalByIdMethod = AnimalServiceGrpc.getGetAnimalByIdMethod) == null) {
           AnimalServiceGrpc.getGetAnimalByIdMethod = getGetAnimalByIdMethod =
-              io.grpc.MethodDescriptor.<via.sdj3.slaughterhousepart2.generated.animal.RequestText, via.sdj3.slaughterhousepart2.generated.animal.ResponseText>newBuilder()
+              io.grpc.MethodDescriptor.<via.sdj3.slaughterhousepart2.generated.animal.RequestText, via.sdj3.slaughterhousepart2.generated.animal.AnimalObj>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "getAnimalById"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   via.sdj3.slaughterhousepart2.generated.animal.RequestText.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  via.sdj3.slaughterhousepart2.generated.animal.ResponseText.getDefaultInstance()))
+                  via.sdj3.slaughterhousepart2.generated.animal.AnimalObj.getDefaultInstance()))
               .setSchemaDescriptor(new AnimalServiceMethodDescriptorSupplier("getAnimalById"))
               .build();
         }
@@ -135,7 +135,7 @@ public final class AnimalServiceGrpc {
     /**
      */
     default void getAnimalById(via.sdj3.slaughterhousepart2.generated.animal.RequestText request,
-        io.grpc.stub.StreamObserver<via.sdj3.slaughterhousepart2.generated.animal.ResponseText> responseObserver) {
+        io.grpc.stub.StreamObserver<via.sdj3.slaughterhousepart2.generated.animal.AnimalObj> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetAnimalByIdMethod(), responseObserver);
     }
   }
@@ -178,7 +178,7 @@ public final class AnimalServiceGrpc {
     /**
      */
     public void getAnimalById(via.sdj3.slaughterhousepart2.generated.animal.RequestText request,
-        io.grpc.stub.StreamObserver<via.sdj3.slaughterhousepart2.generated.animal.ResponseText> responseObserver) {
+        io.grpc.stub.StreamObserver<via.sdj3.slaughterhousepart2.generated.animal.AnimalObj> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetAnimalByIdMethod(), getCallOptions()), request, responseObserver);
     }
@@ -209,7 +209,7 @@ public final class AnimalServiceGrpc {
 
     /**
      */
-    public via.sdj3.slaughterhousepart2.generated.animal.ResponseText getAnimalById(via.sdj3.slaughterhousepart2.generated.animal.RequestText request) {
+    public via.sdj3.slaughterhousepart2.generated.animal.AnimalObj getAnimalById(via.sdj3.slaughterhousepart2.generated.animal.RequestText request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetAnimalByIdMethod(), getCallOptions(), request);
     }
@@ -241,7 +241,7 @@ public final class AnimalServiceGrpc {
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<via.sdj3.slaughterhousepart2.generated.animal.ResponseText> getAnimalById(
+    public com.google.common.util.concurrent.ListenableFuture<via.sdj3.slaughterhousepart2.generated.animal.AnimalObj> getAnimalById(
         via.sdj3.slaughterhousepart2.generated.animal.RequestText request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetAnimalByIdMethod(), getCallOptions()), request);
@@ -274,7 +274,7 @@ public final class AnimalServiceGrpc {
           break;
         case METHODID_GET_ANIMAL_BY_ID:
           serviceImpl.getAnimalById((via.sdj3.slaughterhousepart2.generated.animal.RequestText) request,
-              (io.grpc.stub.StreamObserver<via.sdj3.slaughterhousepart2.generated.animal.ResponseText>) responseObserver);
+              (io.grpc.stub.StreamObserver<via.sdj3.slaughterhousepart2.generated.animal.AnimalObj>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -306,7 +306,7 @@ public final class AnimalServiceGrpc {
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
               via.sdj3.slaughterhousepart2.generated.animal.RequestText,
-              via.sdj3.slaughterhousepart2.generated.animal.ResponseText>(
+              via.sdj3.slaughterhousepart2.generated.animal.AnimalObj>(
                 service, METHODID_GET_ANIMAL_BY_ID)))
         .build();
   }

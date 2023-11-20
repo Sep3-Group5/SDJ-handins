@@ -42,11 +42,11 @@ public final class Animal {
       "ext\030\001 \001(\005\"#\n\014ResponseText\022\023\n\013output_text" +
       "\030\001 \001(\t\"S\n\tAnimalObj\022\n\n\002id\030\001 \001(\005\022\014\n\004date\030" +
       "\002 \001(\t\022\014\n\004name\030\003 \001(\t\022\016\n\006origin\030\004 \001(\t\022\016\n\006w" +
-      "eight\030\005 \001(\0012g\n\016ProductService\022%\n\taddAnim" +
-      "al\022\n.AnimalObj\032\n.AnimalObj\"\000\022.\n\rgetAnima" +
-      "lById\022\014.RequestText\032\r.ResponseText\"\000B4\n0" +
-      "com.example.slaughterhousepart3.generate" +
-      "d.animalP\001b\006proto3"
+      "eight\030\005 \001(\0012c\n\rAnimalService\022%\n\taddAnima" +
+      "l\022\n.AnimalObj\032\n.AnimalObj\"\000\022+\n\rgetAnimal" +
+      "ById\022\014.RequestText\032\n.AnimalObj\"\000B4\n0com." +
+      "example.slaughterhousepart3.generated.an" +
+      "imalP\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

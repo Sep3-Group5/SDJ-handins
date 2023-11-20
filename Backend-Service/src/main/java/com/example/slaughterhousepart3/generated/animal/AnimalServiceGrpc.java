@@ -8,11 +8,11 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
     value = "by gRPC proto compiler (version 1.58.0)",
     comments = "Source: animal.proto")
 @io.grpc.stub.annotations.GrpcGenerated
-public final class ProductServiceGrpc {
+public final class AnimalServiceGrpc {
 
-  private ProductServiceGrpc() {}
+  private AnimalServiceGrpc() {}
 
-  public static final java.lang.String SERVICE_NAME = "ProductService";
+  public static final java.lang.String SERVICE_NAME = "AnimalService";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<com.example.slaughterhousepart3.generated.animal.AnimalObj,
@@ -26,10 +26,10 @@ public final class ProductServiceGrpc {
   public static io.grpc.MethodDescriptor<com.example.slaughterhousepart3.generated.animal.AnimalObj,
       com.example.slaughterhousepart3.generated.animal.AnimalObj> getAddAnimalMethod() {
     io.grpc.MethodDescriptor<com.example.slaughterhousepart3.generated.animal.AnimalObj, com.example.slaughterhousepart3.generated.animal.AnimalObj> getAddAnimalMethod;
-    if ((getAddAnimalMethod = ProductServiceGrpc.getAddAnimalMethod) == null) {
-      synchronized (ProductServiceGrpc.class) {
-        if ((getAddAnimalMethod = ProductServiceGrpc.getAddAnimalMethod) == null) {
-          ProductServiceGrpc.getAddAnimalMethod = getAddAnimalMethod =
+    if ((getAddAnimalMethod = AnimalServiceGrpc.getAddAnimalMethod) == null) {
+      synchronized (AnimalServiceGrpc.class) {
+        if ((getAddAnimalMethod = AnimalServiceGrpc.getAddAnimalMethod) == null) {
+          AnimalServiceGrpc.getAddAnimalMethod = getAddAnimalMethod =
               io.grpc.MethodDescriptor.<com.example.slaughterhousepart3.generated.animal.AnimalObj, com.example.slaughterhousepart3.generated.animal.AnimalObj>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "addAnimal"))
@@ -38,7 +38,7 @@ public final class ProductServiceGrpc {
                   com.example.slaughterhousepart3.generated.animal.AnimalObj.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.example.slaughterhousepart3.generated.animal.AnimalObj.getDefaultInstance()))
-              .setSchemaDescriptor(new ProductServiceMethodDescriptorSupplier("addAnimal"))
+              .setSchemaDescriptor(new AnimalServiceMethodDescriptorSupplier("addAnimal"))
               .build();
         }
       }
@@ -47,29 +47,29 @@ public final class ProductServiceGrpc {
   }
 
   private static volatile io.grpc.MethodDescriptor<com.example.slaughterhousepart3.generated.animal.RequestText,
-      com.example.slaughterhousepart3.generated.animal.ResponseText> getGetAnimalByIdMethod;
+      com.example.slaughterhousepart3.generated.animal.AnimalObj> getGetAnimalByIdMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "getAnimalById",
       requestType = com.example.slaughterhousepart3.generated.animal.RequestText.class,
-      responseType = com.example.slaughterhousepart3.generated.animal.ResponseText.class,
+      responseType = com.example.slaughterhousepart3.generated.animal.AnimalObj.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.example.slaughterhousepart3.generated.animal.RequestText,
-      com.example.slaughterhousepart3.generated.animal.ResponseText> getGetAnimalByIdMethod() {
-    io.grpc.MethodDescriptor<com.example.slaughterhousepart3.generated.animal.RequestText, com.example.slaughterhousepart3.generated.animal.ResponseText> getGetAnimalByIdMethod;
-    if ((getGetAnimalByIdMethod = ProductServiceGrpc.getGetAnimalByIdMethod) == null) {
-      synchronized (ProductServiceGrpc.class) {
-        if ((getGetAnimalByIdMethod = ProductServiceGrpc.getGetAnimalByIdMethod) == null) {
-          ProductServiceGrpc.getGetAnimalByIdMethod = getGetAnimalByIdMethod =
-              io.grpc.MethodDescriptor.<com.example.slaughterhousepart3.generated.animal.RequestText, com.example.slaughterhousepart3.generated.animal.ResponseText>newBuilder()
+      com.example.slaughterhousepart3.generated.animal.AnimalObj> getGetAnimalByIdMethod() {
+    io.grpc.MethodDescriptor<com.example.slaughterhousepart3.generated.animal.RequestText, com.example.slaughterhousepart3.generated.animal.AnimalObj> getGetAnimalByIdMethod;
+    if ((getGetAnimalByIdMethod = AnimalServiceGrpc.getGetAnimalByIdMethod) == null) {
+      synchronized (AnimalServiceGrpc.class) {
+        if ((getGetAnimalByIdMethod = AnimalServiceGrpc.getGetAnimalByIdMethod) == null) {
+          AnimalServiceGrpc.getGetAnimalByIdMethod = getGetAnimalByIdMethod =
+              io.grpc.MethodDescriptor.<com.example.slaughterhousepart3.generated.animal.RequestText, com.example.slaughterhousepart3.generated.animal.AnimalObj>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "getAnimalById"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.example.slaughterhousepart3.generated.animal.RequestText.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.example.slaughterhousepart3.generated.animal.ResponseText.getDefaultInstance()))
-              .setSchemaDescriptor(new ProductServiceMethodDescriptorSupplier("getAnimalById"))
+                  com.example.slaughterhousepart3.generated.animal.AnimalObj.getDefaultInstance()))
+              .setSchemaDescriptor(new AnimalServiceMethodDescriptorSupplier("getAnimalById"))
               .build();
         }
       }
@@ -80,45 +80,45 @@ public final class ProductServiceGrpc {
   /**
    * Creates a new async stub that supports all call types for the service
    */
-  public static ProductServiceStub newStub(io.grpc.Channel channel) {
-    io.grpc.stub.AbstractStub.StubFactory<ProductServiceStub> factory =
-      new io.grpc.stub.AbstractStub.StubFactory<ProductServiceStub>() {
+  public static AnimalServiceStub newStub(io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<AnimalServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<AnimalServiceStub>() {
         @java.lang.Override
-        public ProductServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-          return new ProductServiceStub(channel, callOptions);
+        public AnimalServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new AnimalServiceStub(channel, callOptions);
         }
       };
-    return ProductServiceStub.newStub(factory, channel);
+    return AnimalServiceStub.newStub(factory, channel);
   }
 
   /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
-  public static ProductServiceBlockingStub newBlockingStub(
+  public static AnimalServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    io.grpc.stub.AbstractStub.StubFactory<ProductServiceBlockingStub> factory =
-      new io.grpc.stub.AbstractStub.StubFactory<ProductServiceBlockingStub>() {
+    io.grpc.stub.AbstractStub.StubFactory<AnimalServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<AnimalServiceBlockingStub>() {
         @java.lang.Override
-        public ProductServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-          return new ProductServiceBlockingStub(channel, callOptions);
+        public AnimalServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new AnimalServiceBlockingStub(channel, callOptions);
         }
       };
-    return ProductServiceBlockingStub.newStub(factory, channel);
+    return AnimalServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
    * Creates a new ListenableFuture-style stub that supports unary calls on the service
    */
-  public static ProductServiceFutureStub newFutureStub(
+  public static AnimalServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    io.grpc.stub.AbstractStub.StubFactory<ProductServiceFutureStub> factory =
-      new io.grpc.stub.AbstractStub.StubFactory<ProductServiceFutureStub>() {
+    io.grpc.stub.AbstractStub.StubFactory<AnimalServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<AnimalServiceFutureStub>() {
         @java.lang.Override
-        public ProductServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-          return new ProductServiceFutureStub(channel, callOptions);
+        public AnimalServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new AnimalServiceFutureStub(channel, callOptions);
         }
       };
-    return ProductServiceFutureStub.newStub(factory, channel);
+    return AnimalServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -135,36 +135,36 @@ public final class ProductServiceGrpc {
     /**
      */
     default void getAnimalById(com.example.slaughterhousepart3.generated.animal.RequestText request,
-        io.grpc.stub.StreamObserver<com.example.slaughterhousepart3.generated.animal.ResponseText> responseObserver) {
+        io.grpc.stub.StreamObserver<com.example.slaughterhousepart3.generated.animal.AnimalObj> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetAnimalByIdMethod(), responseObserver);
     }
   }
 
   /**
-   * Base class for the server implementation of the service ProductService.
+   * Base class for the server implementation of the service AnimalService.
    */
-  public static abstract class ProductServiceImplBase
+  public static abstract class AnimalServiceImplBase
       implements io.grpc.BindableService, AsyncService {
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return ProductServiceGrpc.bindService(this);
+      return AnimalServiceGrpc.bindService(this);
     }
   }
 
   /**
-   * A stub to allow clients to do asynchronous rpc calls to service ProductService.
+   * A stub to allow clients to do asynchronous rpc calls to service AnimalService.
    */
-  public static final class ProductServiceStub
-      extends io.grpc.stub.AbstractAsyncStub<ProductServiceStub> {
-    private ProductServiceStub(
+  public static final class AnimalServiceStub
+      extends io.grpc.stub.AbstractAsyncStub<AnimalServiceStub> {
+    private AnimalServiceStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected ProductServiceStub build(
+    protected AnimalServiceStub build(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-      return new ProductServiceStub(channel, callOptions);
+      return new AnimalServiceStub(channel, callOptions);
     }
 
     /**
@@ -178,26 +178,26 @@ public final class ProductServiceGrpc {
     /**
      */
     public void getAnimalById(com.example.slaughterhousepart3.generated.animal.RequestText request,
-        io.grpc.stub.StreamObserver<com.example.slaughterhousepart3.generated.animal.ResponseText> responseObserver) {
+        io.grpc.stub.StreamObserver<com.example.slaughterhousepart3.generated.animal.AnimalObj> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetAnimalByIdMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
   /**
-   * A stub to allow clients to do synchronous rpc calls to service ProductService.
+   * A stub to allow clients to do synchronous rpc calls to service AnimalService.
    */
-  public static final class ProductServiceBlockingStub
-      extends io.grpc.stub.AbstractBlockingStub<ProductServiceBlockingStub> {
-    private ProductServiceBlockingStub(
+  public static final class AnimalServiceBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<AnimalServiceBlockingStub> {
+    private AnimalServiceBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected ProductServiceBlockingStub build(
+    protected AnimalServiceBlockingStub build(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-      return new ProductServiceBlockingStub(channel, callOptions);
+      return new AnimalServiceBlockingStub(channel, callOptions);
     }
 
     /**
@@ -209,26 +209,26 @@ public final class ProductServiceGrpc {
 
     /**
      */
-    public com.example.slaughterhousepart3.generated.animal.ResponseText getAnimalById(com.example.slaughterhousepart3.generated.animal.RequestText request) {
+    public com.example.slaughterhousepart3.generated.animal.AnimalObj getAnimalById(com.example.slaughterhousepart3.generated.animal.RequestText request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetAnimalByIdMethod(), getCallOptions(), request);
     }
   }
 
   /**
-   * A stub to allow clients to do ListenableFuture-style rpc calls to service ProductService.
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service AnimalService.
    */
-  public static final class ProductServiceFutureStub
-      extends io.grpc.stub.AbstractFutureStub<ProductServiceFutureStub> {
-    private ProductServiceFutureStub(
+  public static final class AnimalServiceFutureStub
+      extends io.grpc.stub.AbstractFutureStub<AnimalServiceFutureStub> {
+    private AnimalServiceFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected ProductServiceFutureStub build(
+    protected AnimalServiceFutureStub build(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-      return new ProductServiceFutureStub(channel, callOptions);
+      return new AnimalServiceFutureStub(channel, callOptions);
     }
 
     /**
@@ -241,7 +241,7 @@ public final class ProductServiceGrpc {
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.example.slaughterhousepart3.generated.animal.ResponseText> getAnimalById(
+    public com.google.common.util.concurrent.ListenableFuture<com.example.slaughterhousepart3.generated.animal.AnimalObj> getAnimalById(
         com.example.slaughterhousepart3.generated.animal.RequestText request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetAnimalByIdMethod(), getCallOptions()), request);
@@ -274,7 +274,7 @@ public final class ProductServiceGrpc {
           break;
         case METHODID_GET_ANIMAL_BY_ID:
           serviceImpl.getAnimalById((com.example.slaughterhousepart3.generated.animal.RequestText) request,
-              (io.grpc.stub.StreamObserver<com.example.slaughterhousepart3.generated.animal.ResponseText>) responseObserver);
+              (io.grpc.stub.StreamObserver<com.example.slaughterhousepart3.generated.animal.AnimalObj>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -306,14 +306,14 @@ public final class ProductServiceGrpc {
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
               com.example.slaughterhousepart3.generated.animal.RequestText,
-              com.example.slaughterhousepart3.generated.animal.ResponseText>(
+              com.example.slaughterhousepart3.generated.animal.AnimalObj>(
                 service, METHODID_GET_ANIMAL_BY_ID)))
         .build();
   }
 
-  private static abstract class ProductServiceBaseDescriptorSupplier
+  private static abstract class AnimalServiceBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoFileDescriptorSupplier, io.grpc.protobuf.ProtoServiceDescriptorSupplier {
-    ProductServiceBaseDescriptorSupplier() {}
+    AnimalServiceBaseDescriptorSupplier() {}
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
@@ -322,21 +322,21 @@ public final class ProductServiceGrpc {
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.ServiceDescriptor getServiceDescriptor() {
-      return getFileDescriptor().findServiceByName("ProductService");
+      return getFileDescriptor().findServiceByName("AnimalService");
     }
   }
 
-  private static final class ProductServiceFileDescriptorSupplier
-      extends ProductServiceBaseDescriptorSupplier {
-    ProductServiceFileDescriptorSupplier() {}
+  private static final class AnimalServiceFileDescriptorSupplier
+      extends AnimalServiceBaseDescriptorSupplier {
+    AnimalServiceFileDescriptorSupplier() {}
   }
 
-  private static final class ProductServiceMethodDescriptorSupplier
-      extends ProductServiceBaseDescriptorSupplier
+  private static final class AnimalServiceMethodDescriptorSupplier
+      extends AnimalServiceBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
     private final java.lang.String methodName;
 
-    ProductServiceMethodDescriptorSupplier(java.lang.String methodName) {
+    AnimalServiceMethodDescriptorSupplier(java.lang.String methodName) {
       this.methodName = methodName;
     }
 
@@ -351,11 +351,11 @@ public final class ProductServiceGrpc {
   public static io.grpc.ServiceDescriptor getServiceDescriptor() {
     io.grpc.ServiceDescriptor result = serviceDescriptor;
     if (result == null) {
-      synchronized (ProductServiceGrpc.class) {
+      synchronized (AnimalServiceGrpc.class) {
         result = serviceDescriptor;
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
-              .setSchemaDescriptor(new ProductServiceFileDescriptorSupplier())
+              .setSchemaDescriptor(new AnimalServiceFileDescriptorSupplier())
               .addMethod(getAddAnimalMethod())
               .addMethod(getGetAnimalByIdMethod())
               .build();

@@ -5,7 +5,7 @@ option java_package = "via.sdj3.slaughterhousepart2.generated.animal";
 
 service AnimalService {
   rpc addAnimal(AnimalObj) returns (AnimalObj) {};
-  rpc getAnimalById(RequestText) returns (ResponseText){};
+  rpc getAnimalById(RequestText) returns (AnimalObj){};
 }
 
 message RequestText{

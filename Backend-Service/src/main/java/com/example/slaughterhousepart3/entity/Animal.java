@@ -1,9 +1,8 @@
 package com.example.slaughterhousepart3.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
+
+import java.util.List;
 
 @Entity
 @Table
@@ -21,6 +20,9 @@ public class Animal
   @Column
   private double weight;
 
+  @OneToMany(mappedBy = "animal", cascade = CascadeType.ALL)
+  private List<AnimalPart> AnimalParts;
+
   public Animal(int animalId, String name, String dateOfArrival, String placeOfOrigin, double weight) {
     this.animalId = animalId;
     this.name = name;
@@ -32,6 +34,19 @@ public class Animal
   public Animal()
   {
 
+  }
+
+  public void setAnimalParts(List<AnimalPart> animalParts) {
+    AnimalParts = animalParts;
+  }
+
+  public List<AnimalPart> getAnimalParts() {
+    return AnimalParts;
+  }
+
+  public void addAnimalPart(AnimalPart animalPart)
+  {
+    AnimalParts.add(animalPart);
   }
 
   public int getAnimalId()

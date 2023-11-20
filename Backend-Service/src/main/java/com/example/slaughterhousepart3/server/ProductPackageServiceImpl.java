@@ -1,26 +1,25 @@
 package com.example.slaughterhousepart3.server;
 
+import com.example.slaughterhousepart3.generated.RequestText;
+import com.example.slaughterhousepart3.generated.ResponseText;
 import io.grpc.stub.StreamObserver;
-import via.sdj3.grpc.generated.PackageRequest;
-import via.sdj3.grpc.generated.PackageResponse;
-import via.sdj3.grpc.generated.ProductPackageServiceGrpc;
 
 import java.util.UUID;
 
-public class ProductPackageServiceImpl extends ProductPackageServiceGrpc.ProductPackageServiceImplBase {
-	public void PackageProduct(PackageRequest request, StreamObserver<PackageResponse> responseObserver){
+public class ProductPackageServiceImpl  {
+	public void PackageProduct(RequestText request, StreamObserver<ResponseText> responseObserver){
 		//super.packageProduct(request, responseObserver);
-		String animalId = request.getProduct().getAnimalId();
-		String animalPart = request.getProduct().getAnimalPart();
+		String input = request.getInputText();
+		String output = responseObserver.toString();
 
 		//generate product id
 		UUID uuid = UUID.randomUUID();
 		String productId = uuid.toString();
 
 		//log
-		System.out.println("The part " + animalPart + " from animal with id: " + animalId + " is under packaging");
-		String respondMessage = "The part " + animalPart + " from animal with id: " + animalId + " is now packaged to a product. \n Priduct ID: " + productId + "\n Status: Ready for delivery.";
-		PackageResponse packageResponse = PackageResponse .newBuilder() .setResult(respondMessage).build();
+		System.out.println("Input: " + input + " and Output: " + output);
+		String respondMessage = "Input: " + input + " and Output: " + output + "was send.";
+		ResponseText packageResponse = ResponseText .newBuilder().build();
 
 		//send response to the client
 		responseObserver.onNext(packageResponse);

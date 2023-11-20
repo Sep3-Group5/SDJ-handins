@@ -83,7 +83,6 @@ public final class ProductServiceGrpc {
   public static ProductServiceStub newStub(io.grpc.Channel channel) {
     io.grpc.stub.AbstractStub.StubFactory<ProductServiceStub> factory =
       new io.grpc.stub.AbstractStub.StubFactory<ProductServiceStub>() {
-        @java.lang.Override
         public ProductServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
           return new ProductServiceStub(channel, callOptions);
         }
@@ -98,7 +97,6 @@ public final class ProductServiceGrpc {
       io.grpc.Channel channel) {
     io.grpc.stub.AbstractStub.StubFactory<ProductServiceBlockingStub> factory =
       new io.grpc.stub.AbstractStub.StubFactory<ProductServiceBlockingStub>() {
-        @java.lang.Override
         public ProductServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
           return new ProductServiceBlockingStub(channel, callOptions);
         }
@@ -113,7 +111,6 @@ public final class ProductServiceGrpc {
       io.grpc.Channel channel) {
     io.grpc.stub.AbstractStub.StubFactory<ProductServiceFutureStub> factory =
       new io.grpc.stub.AbstractStub.StubFactory<ProductServiceFutureStub>() {
-        @java.lang.Override
         public ProductServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
           return new ProductServiceFutureStub(channel, callOptions);
         }
@@ -127,8 +124,7 @@ public final class ProductServiceGrpc {
 
     /**
      */
-    default void getPackages(com.example.slaughterhousepart3.generated.RequestText request,
-        io.grpc.stub.StreamObserver<com.example.slaughterhousepart3.generated.ResponseText> responseObserver) {
+    default void getPackages(com.example.slaughterhousepart3.generated.RequestText request, io.grpc.stub.StreamObserver<com.example.slaughterhousepart3.generated.ResponseText> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetPackagesMethod(), responseObserver);
     }
 
@@ -146,7 +142,7 @@ public final class ProductServiceGrpc {
   public static abstract class ProductServiceImplBase
       implements io.grpc.BindableService, AsyncService {
 
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+public final io.grpc.ServerServiceDefinition bindService() {
       return ProductServiceGrpc.bindService(this);
     }
   }
@@ -264,7 +260,6 @@ public final class ProductServiceGrpc {
       this.methodId = methodId;
     }
 
-    @java.lang.Override
     @java.lang.SuppressWarnings("unchecked")
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
@@ -281,7 +276,6 @@ public final class ProductServiceGrpc {
       }
     }
 
-    @java.lang.Override
     @java.lang.SuppressWarnings("unchecked")
     public io.grpc.stub.StreamObserver<Req> invoke(
         io.grpc.stub.StreamObserver<Resp> responseObserver) {
@@ -315,12 +309,10 @@ public final class ProductServiceGrpc {
       implements io.grpc.protobuf.ProtoFileDescriptorSupplier, io.grpc.protobuf.ProtoServiceDescriptorSupplier {
     ProductServiceBaseDescriptorSupplier() {}
 
-    @java.lang.Override
     public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
       return com.example.slaughterhousepart3.generated.Product.getDescriptor();
     }
 
-    @java.lang.Override
     public com.google.protobuf.Descriptors.ServiceDescriptor getServiceDescriptor() {
       return getFileDescriptor().findServiceByName("ProductService");
     }
@@ -340,7 +332,6 @@ public final class ProductServiceGrpc {
       this.methodName = methodName;
     }
 
-    @java.lang.Override
     public com.google.protobuf.Descriptors.MethodDescriptor getMethodDescriptor() {
       return getServiceDescriptor().findMethodByName(methodName);
     }

@@ -1,7 +1,7 @@
 package com.example.slaughterhousepart3.server;
 
-import com.example.slaughterhousepart3.generated.RequestText;
-import com.example.slaughterhousepart3.generated.ResponseText;
+import com.example.slaughterhousepart3.generated.product.RequestText;
+import com.example.slaughterhousepart3.generated.product.ResponseText;
 import io.grpc.stub.StreamObserver;
 
 import java.util.UUID;

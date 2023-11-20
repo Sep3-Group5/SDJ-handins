@@ -36,16 +36,16 @@ public class AnimalService
         .collect(Collectors.toList());
   }
 
-  public List<Animal> getAllAnimalsByDate(LocalDate dateOfArrival){
+  public List<Animal> getAllAnimalsByDate(String dateOfArrival){
     return animalRepository.findAll()
         .stream()
-        .filter(animal -> animal.getDateOfArrival().isEqual(dateOfArrival))
+        .filter(animal -> animal.getDateOfArrival().equals(dateOfArrival))
         .collect(Collectors.toList());
   }
 
   public void addAnimal(Animal animal){
 
-    if (animalRepository.findById(animal.getRegistrationNo()).isPresent()){
+    if (animalRepository.findById(animal.getAnimalId()).isPresent()){
       throw new IllegalArgumentException("Animal with this ID already exists.");
     }
     animalRepository.save(animal);

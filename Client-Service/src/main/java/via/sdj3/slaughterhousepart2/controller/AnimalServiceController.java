@@ -30,7 +30,7 @@ public class AnimalServiceController{
   @GetMapping("/animals")
   public ResponseEntity<List<Animal>> getAnimals(
       @RequestParam(required = false) String placeOfOrigin,
-      @RequestParam(required = false) LocalDate dateOfArrival
+      @RequestParam(required = false) String dateOfArrival
   ) {
     List<Animal> animals;
     if (placeOfOrigin != null) {

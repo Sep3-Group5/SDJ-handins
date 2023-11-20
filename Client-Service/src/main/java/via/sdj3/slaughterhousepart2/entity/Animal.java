@@ -4,7 +4,6 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
-import org.springframework.cglib.core.Local;
 
 import java.time.LocalDate;
 
@@ -14,9 +13,9 @@ public class Animal
 {
   @Id
   @Column
-  private int registrationNo;
+  private int animalId;
   @Column
-  private LocalDate dateOfArrival;
+  private String dateOfArrival;
   @Column
   private String name;
   @Column
@@ -24,8 +23,8 @@ public class Animal
   @Column
   private double weight;
 
-  public Animal(int registrationNo, String name, LocalDate dateOfArrival, String placeOfOrigin, double weight) {
-    this.registrationNo = registrationNo;
+  public Animal(int animalId, String name, String dateOfArrival, String placeOfOrigin, double weight) {
+    this.animalId = animalId;
     this.name = name;
     this.dateOfArrival = dateOfArrival;
     this.placeOfOrigin = placeOfOrigin;
@@ -37,22 +36,22 @@ public class Animal
 
   }
 
-  public int getRegistrationNo()
+  public int getAnimalId()
   {
-    return registrationNo;
+    return animalId;
   }
 
-  public void setRegistrationNo(int registrationNo)
+  public void setAnimalId(int registrationNo)
   {
-    this.registrationNo = registrationNo;
+    this.animalId = registrationNo;
   }
 
-  public LocalDate getDateOfArrival()
+  public String getDateOfArrival()
   {
     return dateOfArrival;
   }
 
-  public void setDateOfArrival(LocalDate dateOfArrival)
+  public void setDateOfArrival(String dateOfArrival)
   {
     this.dateOfArrival = dateOfArrival;
   }

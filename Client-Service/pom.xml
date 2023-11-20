@@ -10,7 +10,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>via.sdj3</groupId>
-    <artifactId>slaughter-house-part-2</artifactId>
+    <artifactId>Client-Service</artifactId>
     <version>0.0.1</version>
     <name>slaughter-house-part-2</name>
     <description>slaughter-house-part-2</description>

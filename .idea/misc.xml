@@ -5,6 +5,9 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/slaughter-house-part-2/pom.xml" />
+        <option value="$PROJECT_DIR$/slaughter-house-part-3/pom.xml" />
+        <option value="$PROJECT_DIR$/Backend-Service/pom.xml" />
+        <option value="$PROJECT_DIR$/Client-Service/pom.xml" />
       </list>
     </option>
   </component>

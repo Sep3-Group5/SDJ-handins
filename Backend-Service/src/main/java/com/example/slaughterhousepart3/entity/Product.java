@@ -8,6 +8,7 @@ import java.util.List;
 @Table
 public class Product {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column
     public int productId;
     @Column
@@ -16,7 +17,11 @@ public class Product {
     private double weight;
     @Column
     private double price;
-    @OneToMany
+    @ManyToMany
+    @JoinTable(
+            name = "product_animal",
+            joinColumns = @JoinColumn(name = "product_id"),
+            inverseJoinColumns = @JoinColumn(name = "animal_id"))
     private List<Animal> animals;
 
     public Product(int productId, String type, double weight, double price, List<Animal> animals) {

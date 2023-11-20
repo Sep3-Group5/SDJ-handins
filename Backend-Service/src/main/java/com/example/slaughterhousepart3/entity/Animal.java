@@ -9,6 +9,7 @@ import java.util.List;
 public class Animal
 {
   @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
   @Column
   private int animalId;
   @Column
@@ -20,8 +21,19 @@ public class Animal
   @Column
   private double weight;
 
+  @ManyToMany(mappedBy = "animals")
+  private List<Product> products;
+
   @OneToMany(mappedBy = "animal", cascade = CascadeType.ALL)
-  private List<AnimalPart> AnimalParts;
+  private List<AnimalPart> animalParts;
+
+  public List<Product> getProducts() {
+    return products;
+  }
+
+  public void setProducts(List<Product> products) {
+    this.products = products;
+  }
 
   public Animal(int animalId, String name, String dateOfArrival, String placeOfOrigin, double weight) {
     this.animalId = animalId;
@@ -36,17 +48,12 @@ public class Animal
 
   }
 
-  public void setAnimalParts(List<AnimalPart> animalParts) {
-    AnimalParts = animalParts;
-  }
-
   public List<AnimalPart> getAnimalParts() {
-    return AnimalParts;
+    return animalParts;
   }
 
-  public void addAnimalPart(AnimalPart animalPart)
-  {
-    AnimalParts.add(animalPart);
+  public void setAnimalParts(List<AnimalPart> animalParts) {
+    this.animalParts = animalParts;
   }
 
   public int getAnimalId()

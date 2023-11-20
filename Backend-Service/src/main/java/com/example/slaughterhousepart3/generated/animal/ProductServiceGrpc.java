@@ -1,4 +1,4 @@
-package via.sdj3.slaughterhousepart2.generated;
+package com.example.slaughterhousepart3.generated.animal;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 
@@ -6,7 +6,7 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.58.0)",
-    comments = "Source: product.proto")
+    comments = "Source: animal.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class ProductServiceGrpc {
 
@@ -15,66 +15,66 @@ public final class ProductServiceGrpc {
   public static final java.lang.String SERVICE_NAME = "ProductService";
 
   // Static method descriptors that strictly reflect the proto.
-  private static volatile io.grpc.MethodDescriptor<via.sdj3.slaughterhousepart2.generated.RequestText,
-      via.sdj3.slaughterhousepart2.generated.ResponseText> getGetPackagesMethod;
+  private static volatile io.grpc.MethodDescriptor<com.example.slaughterhousepart3.generated.animal.AnimalObj,
+      com.example.slaughterhousepart3.generated.animal.AnimalObj> getAddAnimalMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "getPackages",
-      requestType = via.sdj3.slaughterhousepart2.generated.RequestText.class,
-      responseType = via.sdj3.slaughterhousepart2.generated.ResponseText.class,
+      fullMethodName = SERVICE_NAME + '/' + "addAnimal",
+      requestType = com.example.slaughterhousepart3.generated.animal.AnimalObj.class,
+      responseType = com.example.slaughterhousepart3.generated.animal.AnimalObj.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<via.sdj3.slaughterhousepart2.generated.RequestText,
-      via.sdj3.slaughterhousepart2.generated.ResponseText> getGetPackagesMethod() {
-    io.grpc.MethodDescriptor<via.sdj3.slaughterhousepart2.generated.RequestText, via.sdj3.slaughterhousepart2.generated.ResponseText> getGetPackagesMethod;
-    if ((getGetPackagesMethod = ProductServiceGrpc.getGetPackagesMethod) == null) {
+  public static io.grpc.MethodDescriptor<com.example.slaughterhousepart3.generated.animal.AnimalObj,
+      com.example.slaughterhousepart3.generated.animal.AnimalObj> getAddAnimalMethod() {
+    io.grpc.MethodDescriptor<com.example.slaughterhousepart3.generated.animal.AnimalObj, com.example.slaughterhousepart3.generated.animal.AnimalObj> getAddAnimalMethod;
+    if ((getAddAnimalMethod = ProductServiceGrpc.getAddAnimalMethod) == null) {
       synchronized (ProductServiceGrpc.class) {
-        if ((getGetPackagesMethod = ProductServiceGrpc.getGetPackagesMethod) == null) {
-          ProductServiceGrpc.getGetPackagesMethod = getGetPackagesMethod =
-              io.grpc.MethodDescriptor.<via.sdj3.slaughterhousepart2.generated.RequestText, via.sdj3.slaughterhousepart2.generated.ResponseText>newBuilder()
+        if ((getAddAnimalMethod = ProductServiceGrpc.getAddAnimalMethod) == null) {
+          ProductServiceGrpc.getAddAnimalMethod = getAddAnimalMethod =
+              io.grpc.MethodDescriptor.<com.example.slaughterhousepart3.generated.animal.AnimalObj, com.example.slaughterhousepart3.generated.animal.AnimalObj>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "getPackages"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "addAnimal"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  via.sdj3.slaughterhousepart2.generated.RequestText.getDefaultInstance()))
+                  com.example.slaughterhousepart3.generated.animal.AnimalObj.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  via.sdj3.slaughterhousepart2.generated.ResponseText.getDefaultInstance()))
-              .setSchemaDescriptor(new ProductServiceMethodDescriptorSupplier("getPackages"))
+                  com.example.slaughterhousepart3.generated.animal.AnimalObj.getDefaultInstance()))
+              .setSchemaDescriptor(new ProductServiceMethodDescriptorSupplier("addAnimal"))
               .build();
         }
       }
     }
-    return getGetPackagesMethod;
+    return getAddAnimalMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<via.sdj3.slaughterhousepart2.generated.RequestText,
-      via.sdj3.slaughterhousepart2.generated.ResponseText> getGetAnimalPartsMethod;
+  private static volatile io.grpc.MethodDescriptor<com.example.slaughterhousepart3.generated.animal.RequestText,
+      com.example.slaughterhousepart3.generated.animal.ResponseText> getGetAnimalByIdMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "getAnimalParts",
-      requestType = via.sdj3.slaughterhousepart2.generated.RequestText.class,
-      responseType = via.sdj3.slaughterhousepart2.generated.ResponseText.class,
+      fullMethodName = SERVICE_NAME + '/' + "getAnimalById",
+      requestType = com.example.slaughterhousepart3.generated.animal.RequestText.class,
+      responseType = com.example.slaughterhousepart3.generated.animal.ResponseText.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<via.sdj3.slaughterhousepart2.generated.RequestText,
-      via.sdj3.slaughterhousepart2.generated.ResponseText> getGetAnimalPartsMethod() {
-    io.grpc.MethodDescriptor<via.sdj3.slaughterhousepart2.generated.RequestText, via.sdj3.slaughterhousepart2.generated.ResponseText> getGetAnimalPartsMethod;
-    if ((getGetAnimalPartsMethod = ProductServiceGrpc.getGetAnimalPartsMethod) == null) {
+  public static io.grpc.MethodDescriptor<com.example.slaughterhousepart3.generated.animal.RequestText,
+      com.example.slaughterhousepart3.generated.animal.ResponseText> getGetAnimalByIdMethod() {
+    io.grpc.MethodDescriptor<com.example.slaughterhousepart3.generated.animal.RequestText, com.example.slaughterhousepart3.generated.animal.ResponseText> getGetAnimalByIdMethod;
+    if ((getGetAnimalByIdMethod = ProductServiceGrpc.getGetAnimalByIdMethod) == null) {
       synchronized (ProductServiceGrpc.class) {
-        if ((getGetAnimalPartsMethod = ProductServiceGrpc.getGetAnimalPartsMethod) == null) {
-          ProductServiceGrpc.getGetAnimalPartsMethod = getGetAnimalPartsMethod =
-              io.grpc.MethodDescriptor.<via.sdj3.slaughterhousepart2.generated.RequestText, via.sdj3.slaughterhousepart2.generated.ResponseText>newBuilder()
+        if ((getGetAnimalByIdMethod = ProductServiceGrpc.getGetAnimalByIdMethod) == null) {
+          ProductServiceGrpc.getGetAnimalByIdMethod = getGetAnimalByIdMethod =
+              io.grpc.MethodDescriptor.<com.example.slaughterhousepart3.generated.animal.RequestText, com.example.slaughterhousepart3.generated.animal.ResponseText>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "getAnimalParts"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "getAnimalById"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  via.sdj3.slaughterhousepart2.generated.RequestText.getDefaultInstance()))
+                  com.example.slaughterhousepart3.generated.animal.RequestText.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  via.sdj3.slaughterhousepart2.generated.ResponseText.getDefaultInstance()))
-              .setSchemaDescriptor(new ProductServiceMethodDescriptorSupplier("getAnimalParts"))
+                  com.example.slaughterhousepart3.generated.animal.ResponseText.getDefaultInstance()))
+              .setSchemaDescriptor(new ProductServiceMethodDescriptorSupplier("getAnimalById"))
               .build();
         }
       }
     }
-    return getGetAnimalPartsMethod;
+    return getGetAnimalByIdMethod;
   }
 
   /**
@@ -127,16 +127,16 @@ public final class ProductServiceGrpc {
 
     /**
      */
-    default void getPackages(via.sdj3.slaughterhousepart2.generated.RequestText request,
-        io.grpc.stub.StreamObserver<via.sdj3.slaughterhousepart2.generated.ResponseText> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetPackagesMethod(), responseObserver);
+    default void addAnimal(com.example.slaughterhousepart3.generated.animal.AnimalObj request,
+        io.grpc.stub.StreamObserver<com.example.slaughterhousepart3.generated.animal.AnimalObj> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAddAnimalMethod(), responseObserver);
     }
 
     /**
      */
-    default void getAnimalParts(via.sdj3.slaughterhousepart2.generated.RequestText request,
-        io.grpc.stub.StreamObserver<via.sdj3.slaughterhousepart2.generated.ResponseText> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetAnimalPartsMethod(), responseObserver);
+    default void getAnimalById(com.example.slaughterhousepart3.generated.animal.RequestText request,
+        io.grpc.stub.StreamObserver<com.example.slaughterhousepart3.generated.animal.ResponseText> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetAnimalByIdMethod(), responseObserver);
     }
   }
 
@@ -169,18 +169,18 @@ public final class ProductServiceGrpc {
 
     /**
      */
-    public void getPackages(via.sdj3.slaughterhousepart2.generated.RequestText request,
-        io.grpc.stub.StreamObserver<via.sdj3.slaughterhousepart2.generated.ResponseText> responseObserver) {
+    public void addAnimal(com.example.slaughterhousepart3.generated.animal.AnimalObj request,
+        io.grpc.stub.StreamObserver<com.example.slaughterhousepart3.generated.animal.AnimalObj> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getGetPackagesMethod(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getAddAnimalMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
      */
-    public void getAnimalParts(via.sdj3.slaughterhousepart2.generated.RequestText request,
-        io.grpc.stub.StreamObserver<via.sdj3.slaughterhousepart2.generated.ResponseText> responseObserver) {
+    public void getAnimalById(com.example.slaughterhousepart3.generated.animal.RequestText request,
+        io.grpc.stub.StreamObserver<com.example.slaughterhousepart3.generated.animal.ResponseText> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getGetAnimalPartsMethod(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getGetAnimalByIdMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -202,16 +202,16 @@ public final class ProductServiceGrpc {
 
     /**
      */
-    public via.sdj3.slaughterhousepart2.generated.ResponseText getPackages(via.sdj3.slaughterhousepart2.generated.RequestText request) {
+    public com.example.slaughterhousepart3.generated.animal.AnimalObj addAnimal(com.example.slaughterhousepart3.generated.animal.AnimalObj request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getGetPackagesMethod(), getCallOptions(), request);
+          getChannel(), getAddAnimalMethod(), getCallOptions(), request);
     }
 
     /**
      */
-    public via.sdj3.slaughterhousepart2.generated.ResponseText getAnimalParts(via.sdj3.slaughterhousepart2.generated.RequestText request) {
+    public com.example.slaughterhousepart3.generated.animal.ResponseText getAnimalById(com.example.slaughterhousepart3.generated.animal.RequestText request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getGetAnimalPartsMethod(), getCallOptions(), request);
+          getChannel(), getGetAnimalByIdMethod(), getCallOptions(), request);
     }
   }
 
@@ -233,23 +233,23 @@ public final class ProductServiceGrpc {
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<via.sdj3.slaughterhousepart2.generated.ResponseText> getPackages(
-        via.sdj3.slaughterhousepart2.generated.RequestText request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.example.slaughterhousepart3.generated.animal.AnimalObj> addAnimal(
+        com.example.slaughterhousepart3.generated.animal.AnimalObj request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getGetPackagesMethod(), getCallOptions()), request);
+          getChannel().newCall(getAddAnimalMethod(), getCallOptions()), request);
     }
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<via.sdj3.slaughterhousepart2.generated.ResponseText> getAnimalParts(
-        via.sdj3.slaughterhousepart2.generated.RequestText request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.example.slaughterhousepart3.generated.animal.ResponseText> getAnimalById(
+        com.example.slaughterhousepart3.generated.animal.RequestText request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getGetAnimalPartsMethod(), getCallOptions()), request);
+          getChannel().newCall(getGetAnimalByIdMethod(), getCallOptions()), request);
     }
   }
 
-  private static final int METHODID_GET_PACKAGES = 0;
-  private static final int METHODID_GET_ANIMAL_PARTS = 1;
+  private static final int METHODID_ADD_ANIMAL = 0;
+  private static final int METHODID_GET_ANIMAL_BY_ID = 1;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -268,13 +268,13 @@ public final class ProductServiceGrpc {
     @java.lang.SuppressWarnings("unchecked")
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
-        case METHODID_GET_PACKAGES:
-          serviceImpl.getPackages((via.sdj3.slaughterhousepart2.generated.RequestText) request,
-              (io.grpc.stub.StreamObserver<via.sdj3.slaughterhousepart2.generated.ResponseText>) responseObserver);
+        case METHODID_ADD_ANIMAL:
+          serviceImpl.addAnimal((com.example.slaughterhousepart3.generated.animal.AnimalObj) request,
+              (io.grpc.stub.StreamObserver<com.example.slaughterhousepart3.generated.animal.AnimalObj>) responseObserver);
           break;
-        case METHODID_GET_ANIMAL_PARTS:
-          serviceImpl.getAnimalParts((via.sdj3.slaughterhousepart2.generated.RequestText) request,
-              (io.grpc.stub.StreamObserver<via.sdj3.slaughterhousepart2.generated.ResponseText>) responseObserver);
+        case METHODID_GET_ANIMAL_BY_ID:
+          serviceImpl.getAnimalById((com.example.slaughterhousepart3.generated.animal.RequestText) request,
+              (io.grpc.stub.StreamObserver<com.example.slaughterhousepart3.generated.animal.ResponseText>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -295,19 +295,19 @@ public final class ProductServiceGrpc {
   public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
     return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
         .addMethod(
-          getGetPackagesMethod(),
+          getAddAnimalMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
-              via.sdj3.slaughterhousepart2.generated.RequestText,
-              via.sdj3.slaughterhousepart2.generated.ResponseText>(
-                service, METHODID_GET_PACKAGES)))
+              com.example.slaughterhousepart3.generated.animal.AnimalObj,
+              com.example.slaughterhousepart3.generated.animal.AnimalObj>(
+                service, METHODID_ADD_ANIMAL)))
         .addMethod(
-          getGetAnimalPartsMethod(),
+          getGetAnimalByIdMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
-              via.sdj3.slaughterhousepart2.generated.RequestText,
-              via.sdj3.slaughterhousepart2.generated.ResponseText>(
-                service, METHODID_GET_ANIMAL_PARTS)))
+              com.example.slaughterhousepart3.generated.animal.RequestText,
+              com.example.slaughterhousepart3.generated.animal.ResponseText>(
+                service, METHODID_GET_ANIMAL_BY_ID)))
         .build();
   }
 
@@ -317,7 +317,7 @@ public final class ProductServiceGrpc {
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
-      return via.sdj3.slaughterhousepart2.generated.Product.getDescriptor();
+      return com.example.slaughterhousepart3.generated.animal.Animal.getDescriptor();
     }
 
     @java.lang.Override
@@ -356,8 +356,8 @@ public final class ProductServiceGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new ProductServiceFileDescriptorSupplier())
-              .addMethod(getGetPackagesMethod())
-              .addMethod(getGetAnimalPartsMethod())
+              .addMethod(getAddAnimalMethod())
+              .addMethod(getGetAnimalByIdMethod())
               .build();
         }
       }

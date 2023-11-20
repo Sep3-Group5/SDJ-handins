@@ -1,7 +1,7 @@
 syntax = "proto3";
 
 option java_multiple_files = true;
-option java_package = "com.example.slaughterhousepart3.generated";
+option java_package = "com.example.slaughterhousepart3.generated.product";
 
 service ProductService {
 	rpc getPackages(RequestText) returns (ResponseText) {};

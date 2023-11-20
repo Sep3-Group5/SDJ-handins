@@ -3,9 +3,11 @@ package via.sdj3.slaughterhousepart2.grpcClient.animal;
 import io.grpc.ManagedChannel;
 import io.grpc.ManagedChannelBuilder;
 import io.grpc.StatusRuntimeException;
+import org.checkerframework.checker.units.qual.A;
 import via.sdj3.slaughterhousepart2.entity.Animal;
 import via.sdj3.slaughterhousepart2.generated.animal.AnimalObj;
 import via.sdj3.slaughterhousepart2.generated.animal.AnimalServiceGrpc;
+import via.sdj3.slaughterhousepart2.generated.animal.RequestText;
 
 public class GRPCAnimalClientImpl implements AnimalClient
 {
@@ -41,13 +43,29 @@ public class GRPCAnimalClientImpl implements AnimalClient
         }
 
         System.out.println(animalObjFromServer.getName());
-        String animalDescription = getAnimalById(animalObjFromServer.getId());
+        Animal realObj = getAnimalById(animalObjFromServer.getId());
         System.out.println(realObj.getName());
         return realObj;
     }
 
     @Override
-    public String getAnimalById(int id) {
-        return null;
+    public Animal getAnimalById(int id) {
+        AnimalObj animalObjFromServer;
+        RequestText idReqText = RequestText.newBuilder().setInputText(id).build();
+        try
+        {
+            animalObjFromServer = getAnimalBlockingStub().getAnimalById(idReqText);
+        }
+        catch (StatusRuntimeException sre)
+        {
+            System.out.println(sre.getStatus().getDescription());
+            throw new RuntimeException(sre.getStatus().getDescription());
+        }
+        finally
+        {
+            animalBlockingStub = null;
+        }
+        Animal realObj = new Animal(animalObjFromServer.getId(), animalObjFromServer.getDate(), animalObjFromServer.getName(), animalObjFromServer.getOrigin(), animalObjFromServer.getWeight());
+        return realObj;
     }
 }

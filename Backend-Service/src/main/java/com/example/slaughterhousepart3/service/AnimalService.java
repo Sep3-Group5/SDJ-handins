@@ -21,6 +21,16 @@ public class AnimalService {
         return animalRepository.findById(id);
     }
 
+    public void addAnimal(Animal animal) {
+        animalRepository.save(animal);
+    }
+
+    public List<Animal> getAllAnimals() {
+        return animalRepository.findAll();
+    }
+}
+
+/*
     public List<Animal> getAnimalByDate(LocalDate date)
     {
         List<Animal> animals = animalRepository.findAll()
@@ -39,7 +49,4 @@ public class AnimalService {
         return animals;
     }
 
-    public void addAnimal(Animal animal) {
-        animalRepository.save(animal);
-    }
-}
+ */

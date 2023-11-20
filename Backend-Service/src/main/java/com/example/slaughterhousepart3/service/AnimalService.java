@@ -1,6 +1,7 @@
 package com.example.slaughterhousepart3.service;
 
 import com.example.slaughterhousepart3.entity.Animal;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.example.slaughterhousepart3.repository.AnimalRepository;
 
@@ -13,6 +14,7 @@ import java.util.stream.Collectors;
 public class AnimalService {
     private AnimalRepository animalRepository;
 
+    @Autowired
     public AnimalService(AnimalRepository animalRepository) {
         this.animalRepository = animalRepository;
     }

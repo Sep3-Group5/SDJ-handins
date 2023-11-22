@@ -3,9 +3,12 @@ package com.example.slaughterhousepart3.server;
 import com.example.slaughterhousepart3.generated.product.RequestText;
 import com.example.slaughterhousepart3.generated.product.ResponseText;
 import io.grpc.stub.StreamObserver;
+import org.springframework.stereotype.Service;
 
 import java.util.UUID;
 
+
+@Service
 public class ProductPackageServiceImpl  {
 	public void PackageProduct(RequestText request, StreamObserver<ResponseText> responseObserver){
 		//super.packageProduct(request, responseObserver);

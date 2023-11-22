@@ -3,12 +3,13 @@ package com.example.slaughterhousepart3.server;
 import com.example.slaughterhousepart3.generated.product.RequestText;
 import com.example.slaughterhousepart3.generated.product.ResponseText;
 import io.grpc.stub.StreamObserver;
+import net.devh.boot.grpc.server.service.GrpcService;
 import org.springframework.stereotype.Service;
 
 import java.util.UUID;
 
 
-@Service
+@GrpcService
 public class ProductPackageServiceImpl  {
 	public void PackageProduct(RequestText request, StreamObserver<ResponseText> responseObserver){
 		//super.packageProduct(request, responseObserver);

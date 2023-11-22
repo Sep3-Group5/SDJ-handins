@@ -19,6 +19,10 @@ public class AnimalService {
         this.animalRepository = animalRepository;
     }
 
+    public AnimalService() {
+        ////////////////////////////////////////////
+    }
+
     public Optional<Animal> getAnimalById(int id) {
         return animalRepository.findById(id);
     }

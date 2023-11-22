@@ -9,6 +9,7 @@ import com.example.slaughterhousepart3.repository.AnimalRepository;
 import com.example.slaughterhousepart3.server.AnimalServiceImplementation;
 import com.example.slaughterhousepart3.server.ProductPackageServiceImpl;
 import com.example.slaughterhousepart3.service.AnimalService;
+import com.sun.net.httpserver.HttpServer;
 import io.grpc.Server;
 import io.grpc.ServerBuilder;
 import io.grpc.stub.StreamObserver;
@@ -22,11 +23,32 @@ import java.io.IOException;
 @SpringBootApplication
 public class GrpcServer {
 	public static void main(String[] args) throws IOException, InterruptedException {
-		SpringApplication.run(GrpcServer.class, args);
+		int port = 25565; // Choose a port for your gRPC server
+
+		Server server = ServerBuilder.forPort(port)
+				.addService(new ProductServiceGrpc.ProductServiceImplBase() {
+					// Implement your gRPC service methods here
+				})
+				.addService(new AnimalServiceImplementation(new AnimalService())) // Add your actual service implementation
+				.build();
+
+		SpringApplication.run(GrpcServer.class,args);
+		server.start();
+		System.out.println("Server started on port: " + port);
+		server.awaitTermination();
 	}
 
+
+	public Server grpcServer(AnimalServiceImplementation animalServiceImplementation) throws IOException {
+		int port = 8080; // Choose a port for your gRPC server
+
+		return ServerBuilder.forPort(port)
+				.addService(animalServiceImplementation)
+				.build();
+	}
+}
+
 	/*
-	@Bean
 	public Server grpcServer(AnimalServiceImplementation animalServiceImplementation) throws IOException {
 		return ServerBuilder.forPort(8080)
 				.addService(animalServiceImplementation)
@@ -35,7 +57,8 @@ public class GrpcServer {
 */
 
 
-}
+
+
 /*
 
 package com.example.slaughterhousepart3;
@@ -57,7 +80,6 @@ public class GrpcServer {
 				.addService(new ProductServiceGrpc.ProductServiceImplBase() {
 
 					public void addAnimal(AnimalObj request, StreamObserver<AnimalObj> responseObserver) {
-						super.ad
 						super.addAnimal(request, responseObserver);
 					}
 

@@ -22,7 +22,7 @@ public class Animal
   private double weight;
 
   @ManyToMany(mappedBy = "animals")
-  private List<Product> products;
+  private List<Product> products ;
 
   @OneToMany(mappedBy = "animal", cascade = CascadeType.ALL)
   private List<AnimalPart> animalParts;
@@ -41,6 +41,7 @@ public class Animal
     this.dateOfArrival = dateOfArrival;
     this.placeOfOrigin = placeOfOrigin;
     this.weight = weight;
+
   }
 
   public Animal()

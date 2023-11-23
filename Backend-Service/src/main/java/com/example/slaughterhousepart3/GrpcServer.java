@@ -19,17 +19,20 @@ import org.springframework.context.annotation.Bean;
 
 import java.io.IOException;
 
+import static com.example.slaughterhousepart3.service.AnimalService.animalRepository;
+
 
 @SpringBootApplication
 public class GrpcServer {
 	public static void main(String[] args) throws IOException, InterruptedException {
+
 		int port = 25565; // Choose a port for your gRPC server
 
 		Server server = ServerBuilder.forPort(port)
 				.addService(new ProductServiceGrpc.ProductServiceImplBase() {
 					// Implement your gRPC service methods here
 				})
-				.addService(new AnimalServiceImplementation(new AnimalService())) // Add your actual service implementation
+				.addService(new AnimalServiceImplementation(new AnimalService(animalRepository))) // Add your actual service implementation
 				.build();
 
 		SpringApplication.run(GrpcServer.class,args);
@@ -94,5 +97,5 @@ public class GrpcServer {
 		server.awaitTermination();
 
 	}
-}
+}*/
 

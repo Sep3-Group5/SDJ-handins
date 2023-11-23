@@ -12,16 +12,14 @@ import java.util.stream.Collectors;
 
 @Service
 public class AnimalService {
-    private AnimalRepository animalRepository;
+    public static AnimalRepository animalRepository;
 
     @Autowired
     public AnimalService(AnimalRepository animalRepository) {
         this.animalRepository = animalRepository;
     }
 
-    public AnimalService() {
-        ////////////////////////////////////////////
-    }
+
 
     public Optional<Animal> getAnimalById(int id) {
         return animalRepository.findById(id);

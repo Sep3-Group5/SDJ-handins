@@ -4,26 +4,25 @@
 package via.sdj3.slaughterhousepart2.generated.product;
 
 /**
- * Protobuf type {@code RequestText}
+ * Protobuf type {@code RequestId}
  */
-public  final class RequestText extends
+public  final class RequestId extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:RequestText)
-    RequestTextOrBuilder {
+    // @@protoc_insertion_point(message_implements:RequestId)
+    RequestIdOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use RequestText.newBuilder() to construct.
-  private RequestText(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use RequestId.newBuilder() to construct.
+  private RequestId(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private RequestText() {
-    inputText_ = "";
+  private RequestId() {
   }
 
   @java.lang.Override
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new RequestText();
+    return new RequestId();
   }
 
   @java.lang.Override
@@ -31,7 +30,7 @@ private static final long serialVersionUID = 0L;
   getUnknownFields() {
     return this.unknownFields;
   }
-  private RequestText(
+  private RequestId(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
@@ -49,10 +48,9 @@ private static final long serialVersionUID = 0L;
           case 0:
             done = true;
             break;
-          case 10: {
-            java.lang.String s = input.readStringRequireUtf8();
+          case 8: {
 
-            inputText_ = s;
+            id_ = input.readInt32();
             break;
           }
           default: {
@@ -76,51 +74,25 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return via.sdj3.slaughterhousepart2.generated.product.Product.internal_static_RequestText_descriptor;
+    return via.sdj3.slaughterhousepart2.generated.product.Product.internal_static_RequestId_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return via.sdj3.slaughterhousepart2.generated.product.Product.internal_static_RequestText_fieldAccessorTable
+    return via.sdj3.slaughterhousepart2.generated.product.Product.internal_static_RequestId_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            via.sdj3.slaughterhousepart2.generated.product.RequestText.class, via.sdj3.slaughterhousepart2.generated.product.RequestText.Builder.class);
+            via.sdj3.slaughterhousepart2.generated.product.RequestId.class, via.sdj3.slaughterhousepart2.generated.product.RequestId.Builder.class);
   }
 
-  public static final int INPUT_TEXT_FIELD_NUMBER = 1;
-  private volatile java.lang.Object inputText_;
+  public static final int ID_FIELD_NUMBER = 1;
+  private int id_;
   /**
-   * <code>string input_text = 1;</code>
-   * @return The inputText.
+   * <code>int32 id = 1;</code>
+   * @return The id.
    */
-  public java.lang.String getInputText() {
-    java.lang.Object ref = inputText_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      inputText_ = s;
-      return s;
-    }
-  }
-  /**
-   * <code>string input_text = 1;</code>
-   * @return The bytes for inputText.
-   */
-  public com.google.protobuf.ByteString
-      getInputTextBytes() {
-    java.lang.Object ref = inputText_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      inputText_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
+  public int getId() {
+    return id_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -137,8 +109,8 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!getInputTextBytes().isEmpty()) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, inputText_);
+    if (id_ != 0) {
+      output.writeInt32(1, id_);
     }
     unknownFields.writeTo(output);
   }
@@ -149,8 +121,9 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!getInputTextBytes().isEmpty()) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, inputText_);
+    if (id_ != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt32Size(1, id_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -162,13 +135,13 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof via.sdj3.slaughterhousepart2.generated.product.RequestText)) {
+    if (!(obj instanceof via.sdj3.slaughterhousepart2.generated.product.RequestId)) {
       return super.equals(obj);
     }
-    via.sdj3.slaughterhousepart2.generated.product.RequestText other = (via.sdj3.slaughterhousepart2.generated.product.RequestText) obj;
+    via.sdj3.slaughterhousepart2.generated.product.RequestId other = (via.sdj3.slaughterhousepart2.generated.product.RequestId) obj;
 
-    if (!getInputText()
-        .equals(other.getInputText())) return false;
+    if (getId()
+        != other.getId()) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -180,76 +153,76 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + INPUT_TEXT_FIELD_NUMBER;
-    hash = (53 * hash) + getInputText().hashCode();
+    hash = (37 * hash) + ID_FIELD_NUMBER;
+    hash = (53 * hash) + getId();
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
 
-  public static via.sdj3.slaughterhousepart2.generated.product.RequestText parseFrom(
+  public static via.sdj3.slaughterhousepart2.generated.product.RequestId parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static via.sdj3.slaughterhousepart2.generated.product.RequestText parseFrom(
+  public static via.sdj3.slaughterhousepart2.generated.product.RequestId parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static via.sdj3.slaughterhousepart2.generated.product.RequestText parseFrom(
+  public static via.sdj3.slaughterhousepart2.generated.product.RequestId parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static via.sdj3.slaughterhousepart2.generated.product.RequestText parseFrom(
+  public static via.sdj3.slaughterhousepart2.generated.product.RequestId parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static via.sdj3.slaughterhousepart2.generated.product.RequestText parseFrom(byte[] data)
+  public static via.sdj3.slaughterhousepart2.generated.product.RequestId parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static via.sdj3.slaughterhousepart2.generated.product.RequestText parseFrom(
+  public static via.sdj3.slaughterhousepart2.generated.product.RequestId parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static via.sdj3.slaughterhousepart2.generated.product.RequestText parseFrom(java.io.InputStream input)
+  public static via.sdj3.slaughterhousepart2.generated.product.RequestId parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static via.sdj3.slaughterhousepart2.generated.product.RequestText parseFrom(
+  public static via.sdj3.slaughterhousepart2.generated.product.RequestId parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-  public static via.sdj3.slaughterhousepart2.generated.product.RequestText parseDelimitedFrom(java.io.InputStream input)
+  public static via.sdj3.slaughterhousepart2.generated.product.RequestId parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-  public static via.sdj3.slaughterhousepart2.generated.product.RequestText parseDelimitedFrom(
+  public static via.sdj3.slaughterhousepart2.generated.product.RequestId parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static via.sdj3.slaughterhousepart2.generated.product.RequestText parseFrom(
+  public static via.sdj3.slaughterhousepart2.generated.product.RequestId parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static via.sdj3.slaughterhousepart2.generated.product.RequestText parseFrom(
+  public static via.sdj3.slaughterhousepart2.generated.product.RequestId parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -262,7 +235,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(via.sdj3.slaughterhousepart2.generated.product.RequestText prototype) {
+  public static Builder newBuilder(via.sdj3.slaughterhousepart2.generated.product.RequestId prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -278,26 +251,26 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * Protobuf type {@code RequestText}
+   * Protobuf type {@code RequestId}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:RequestText)
-      via.sdj3.slaughterhousepart2.generated.product.RequestTextOrBuilder {
+      // @@protoc_insertion_point(builder_implements:RequestId)
+      via.sdj3.slaughterhousepart2.generated.product.RequestIdOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return via.sdj3.slaughterhousepart2.generated.product.Product.internal_static_RequestText_descriptor;
+      return via.sdj3.slaughterhousepart2.generated.product.Product.internal_static_RequestId_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return via.sdj3.slaughterhousepart2.generated.product.Product.internal_static_RequestText_fieldAccessorTable
+      return via.sdj3.slaughterhousepart2.generated.product.Product.internal_static_RequestId_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              via.sdj3.slaughterhousepart2.generated.product.RequestText.class, via.sdj3.slaughterhousepart2.generated.product.RequestText.Builder.class);
+              via.sdj3.slaughterhousepart2.generated.product.RequestId.class, via.sdj3.slaughterhousepart2.generated.product.RequestId.Builder.class);
     }
 
-    // Construct using via.sdj3.slaughterhousepart2.generated.product.RequestText.newBuilder()
+    // Construct using via.sdj3.slaughterhousepart2.generated.product.RequestId.newBuilder()
     private Builder() {
       maybeForceBuilderInitialization();
     }
@@ -315,7 +288,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      inputText_ = "";
+      id_ = 0;
 
       return this;
     }
@@ -323,17 +296,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return via.sdj3.slaughterhousepart2.generated.product.Product.internal_static_RequestText_descriptor;
+      return via.sdj3.slaughterhousepart2.generated.product.Product.internal_static_RequestId_descriptor;
     }
 
     @java.lang.Override
-    public via.sdj3.slaughterhousepart2.generated.product.RequestText getDefaultInstanceForType() {
-      return via.sdj3.slaughterhousepart2.generated.product.RequestText.getDefaultInstance();
+    public via.sdj3.slaughterhousepart2.generated.product.RequestId getDefaultInstanceForType() {
+      return via.sdj3.slaughterhousepart2.generated.product.RequestId.getDefaultInstance();
     }
 
     @java.lang.Override
-    public via.sdj3.slaughterhousepart2.generated.product.RequestText build() {
-      via.sdj3.slaughterhousepart2.generated.product.RequestText result = buildPartial();
+    public via.sdj3.slaughterhousepart2.generated.product.RequestId build() {
+      via.sdj3.slaughterhousepart2.generated.product.RequestId result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -341,9 +314,9 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public via.sdj3.slaughterhousepart2.generated.product.RequestText buildPartial() {
-      via.sdj3.slaughterhousepart2.generated.product.RequestText result = new via.sdj3.slaughterhousepart2.generated.product.RequestText(this);
-      result.inputText_ = inputText_;
+    public via.sdj3.slaughterhousepart2.generated.product.RequestId buildPartial() {
+      via.sdj3.slaughterhousepart2.generated.product.RequestId result = new via.sdj3.slaughterhousepart2.generated.product.RequestId(this);
+      result.id_ = id_;
       onBuilt();
       return result;
     }
@@ -382,19 +355,18 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof via.sdj3.slaughterhousepart2.generated.product.RequestText) {
-        return mergeFrom((via.sdj3.slaughterhousepart2.generated.product.RequestText)other);
+      if (other instanceof via.sdj3.slaughterhousepart2.generated.product.RequestId) {
+        return mergeFrom((via.sdj3.slaughterhousepart2.generated.product.RequestId)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(via.sdj3.slaughterhousepart2.generated.product.RequestText other) {
-      if (other == via.sdj3.slaughterhousepart2.generated.product.RequestText.getDefaultInstance()) return this;
-      if (!other.getInputText().isEmpty()) {
-        inputText_ = other.inputText_;
-        onChanged();
+    public Builder mergeFrom(via.sdj3.slaughterhousepart2.generated.product.RequestId other) {
+      if (other == via.sdj3.slaughterhousepart2.generated.product.RequestId.getDefaultInstance()) return this;
+      if (other.getId() != 0) {
+        setId(other.getId());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -411,11 +383,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      via.sdj3.slaughterhousepart2.generated.product.RequestText parsedMessage = null;
+      via.sdj3.slaughterhousepart2.generated.product.RequestId parsedMessage = null;
       try {
         parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (via.sdj3.slaughterhousepart2.generated.product.RequestText) e.getUnfinishedMessage();
+        parsedMessage = (via.sdj3.slaughterhousepart2.generated.product.RequestId) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
         if (parsedMessage != null) {
@@ -425,78 +397,32 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private java.lang.Object inputText_ = "";
+    private int id_ ;
     /**
-     * <code>string input_text = 1;</code>
-     * @return The inputText.
+     * <code>int32 id = 1;</code>
+     * @return The id.
      */
-    public java.lang.String getInputText() {
-      java.lang.Object ref = inputText_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        inputText_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
+    public int getId() {
+      return id_;
     }
     /**
-     * <code>string input_text = 1;</code>
-     * @return The bytes for inputText.
-     */
-    public com.google.protobuf.ByteString
-        getInputTextBytes() {
-      java.lang.Object ref = inputText_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        inputText_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <code>string input_text = 1;</code>
-     * @param value The inputText to set.
+     * <code>int32 id = 1;</code>
+     * @param value The id to set.
      * @return This builder for chaining.
      */
-    public Builder setInputText(
-        java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
-      inputText_ = value;
+    public Builder setId(int value) {
+      
+      id_ = value;
       onChanged();
       return this;
     }
     /**
-     * <code>string input_text = 1;</code>
+     * <code>int32 id = 1;</code>
      * @return This builder for chaining.
      */
-    public Builder clearInputText() {
+    public Builder clearId() {
       
-      inputText_ = getDefaultInstance().getInputText();
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string input_text = 1;</code>
-     * @param value The bytes for inputText to set.
-     * @return This builder for chaining.
-     */
-    public Builder setInputTextBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
-      inputText_ = value;
+      id_ = 0;
       onChanged();
       return this;
     }
@@ -513,41 +439,41 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:RequestText)
+    // @@protoc_insertion_point(builder_scope:RequestId)
   }
 
-  // @@protoc_insertion_point(class_scope:RequestText)
-  private static final via.sdj3.slaughterhousepart2.generated.product.RequestText DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:RequestId)
+  private static final via.sdj3.slaughterhousepart2.generated.product.RequestId DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new via.sdj3.slaughterhousepart2.generated.product.RequestText();
+    DEFAULT_INSTANCE = new via.sdj3.slaughterhousepart2.generated.product.RequestId();
   }
 
-  public static via.sdj3.slaughterhousepart2.generated.product.RequestText getDefaultInstance() {
+  public static via.sdj3.slaughterhousepart2.generated.product.RequestId getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<RequestText>
-      PARSER = new com.google.protobuf.AbstractParser<RequestText>() {
+  private static final com.google.protobuf.Parser<RequestId>
+      PARSER = new com.google.protobuf.AbstractParser<RequestId>() {
     @java.lang.Override
-    public RequestText parsePartialFrom(
+    public RequestId parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new RequestText(input, extensionRegistry);
+      return new RequestId(input, extensionRegistry);
     }
   };
 
-  public static com.google.protobuf.Parser<RequestText> parser() {
+  public static com.google.protobuf.Parser<RequestId> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<RequestText> getParserForType() {
+  public com.google.protobuf.Parser<RequestId> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public via.sdj3.slaughterhousepart2.generated.product.RequestText getDefaultInstanceForType() {
+  public via.sdj3.slaughterhousepart2.generated.product.RequestId getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

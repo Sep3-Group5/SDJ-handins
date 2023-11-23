@@ -1,17 +1,17 @@
 package via.sdj3.slaughterhousepart2.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
+import via.sdj3.slaughterhousepart2.entity.AnimalPart;
+import via.sdj3.slaughterhousepart2.entity.Product;
 
-import java.time.LocalDate;
+import java.util.List;
 
 @Entity
 @Table
 public class Animal
 {
   @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
   @Column
   private int animalId;
   @Column
@@ -23,17 +23,40 @@ public class Animal
   @Column
   private double weight;
 
+  @ManyToMany(mappedBy = "animals")
+  private List<Product> products ;
+
+  @OneToMany(mappedBy = "animal", cascade = CascadeType.ALL)
+  private List<AnimalPart> animalParts;
+
+  public List<Product> getProducts() {
+    return products;
+  }
+
+  public void setProducts(List<Product> products) {
+    this.products = products;
+  }
+
   public Animal(int animalId, String name, String dateOfArrival, String placeOfOrigin, double weight) {
     this.animalId = animalId;
     this.name = name;
     this.dateOfArrival = dateOfArrival;
     this.placeOfOrigin = placeOfOrigin;
     this.weight = weight;
+
   }
 
   public Animal()
   {
 
+  }
+
+  public List<AnimalPart> getAnimalParts() {
+    return animalParts;
+  }
+
+  public void setAnimalParts(List<AnimalPart> animalParts) {
+    this.animalParts = animalParts;
   }
 
   public int getAnimalId()

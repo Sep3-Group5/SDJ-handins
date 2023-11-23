@@ -15,27 +15,27 @@ public final class ProductServiceGrpc {
   public static final java.lang.String SERVICE_NAME = "ProductService";
 
   // Static method descriptors that strictly reflect the proto.
-  private static volatile io.grpc.MethodDescriptor<com.example.slaughterhousepart3.generated.product.RequestText,
+  private static volatile io.grpc.MethodDescriptor<com.example.slaughterhousepart3.generated.product.RequestId,
       com.example.slaughterhousepart3.generated.product.ResponseText> getGetPackagesMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "getPackages",
-      requestType = com.example.slaughterhousepart3.generated.product.RequestText.class,
+      requestType = com.example.slaughterhousepart3.generated.product.RequestId.class,
       responseType = com.example.slaughterhousepart3.generated.product.ResponseText.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.example.slaughterhousepart3.generated.product.RequestText,
+  public static io.grpc.MethodDescriptor<com.example.slaughterhousepart3.generated.product.RequestId,
       com.example.slaughterhousepart3.generated.product.ResponseText> getGetPackagesMethod() {
-    io.grpc.MethodDescriptor<com.example.slaughterhousepart3.generated.product.RequestText, com.example.slaughterhousepart3.generated.product.ResponseText> getGetPackagesMethod;
+    io.grpc.MethodDescriptor<com.example.slaughterhousepart3.generated.product.RequestId, com.example.slaughterhousepart3.generated.product.ResponseText> getGetPackagesMethod;
     if ((getGetPackagesMethod = ProductServiceGrpc.getGetPackagesMethod) == null) {
       synchronized (ProductServiceGrpc.class) {
         if ((getGetPackagesMethod = ProductServiceGrpc.getGetPackagesMethod) == null) {
           ProductServiceGrpc.getGetPackagesMethod = getGetPackagesMethod =
-              io.grpc.MethodDescriptor.<com.example.slaughterhousepart3.generated.product.RequestText, com.example.slaughterhousepart3.generated.product.ResponseText>newBuilder()
+              io.grpc.MethodDescriptor.<com.example.slaughterhousepart3.generated.product.RequestId, com.example.slaughterhousepart3.generated.product.ResponseText>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "getPackages"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.example.slaughterhousepart3.generated.product.RequestText.getDefaultInstance()))
+                  com.example.slaughterhousepart3.generated.product.RequestId.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.example.slaughterhousepart3.generated.product.ResponseText.getDefaultInstance()))
               .setSchemaDescriptor(new ProductServiceMethodDescriptorSupplier("getPackages"))
@@ -46,27 +46,27 @@ public final class ProductServiceGrpc {
     return getGetPackagesMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.example.slaughterhousepart3.generated.product.RequestText,
+  private static volatile io.grpc.MethodDescriptor<com.example.slaughterhousepart3.generated.product.RequestId,
       com.example.slaughterhousepart3.generated.product.ResponseText> getGetAnimalPartsMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "getAnimalParts",
-      requestType = com.example.slaughterhousepart3.generated.product.RequestText.class,
+      requestType = com.example.slaughterhousepart3.generated.product.RequestId.class,
       responseType = com.example.slaughterhousepart3.generated.product.ResponseText.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.example.slaughterhousepart3.generated.product.RequestText,
+  public static io.grpc.MethodDescriptor<com.example.slaughterhousepart3.generated.product.RequestId,
       com.example.slaughterhousepart3.generated.product.ResponseText> getGetAnimalPartsMethod() {
-    io.grpc.MethodDescriptor<com.example.slaughterhousepart3.generated.product.RequestText, com.example.slaughterhousepart3.generated.product.ResponseText> getGetAnimalPartsMethod;
+    io.grpc.MethodDescriptor<com.example.slaughterhousepart3.generated.product.RequestId, com.example.slaughterhousepart3.generated.product.ResponseText> getGetAnimalPartsMethod;
     if ((getGetAnimalPartsMethod = ProductServiceGrpc.getGetAnimalPartsMethod) == null) {
       synchronized (ProductServiceGrpc.class) {
         if ((getGetAnimalPartsMethod = ProductServiceGrpc.getGetAnimalPartsMethod) == null) {
           ProductServiceGrpc.getGetAnimalPartsMethod = getGetAnimalPartsMethod =
-              io.grpc.MethodDescriptor.<com.example.slaughterhousepart3.generated.product.RequestText, com.example.slaughterhousepart3.generated.product.ResponseText>newBuilder()
+              io.grpc.MethodDescriptor.<com.example.slaughterhousepart3.generated.product.RequestId, com.example.slaughterhousepart3.generated.product.ResponseText>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "getAnimalParts"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.example.slaughterhousepart3.generated.product.RequestText.getDefaultInstance()))
+                  com.example.slaughterhousepart3.generated.product.RequestId.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.example.slaughterhousepart3.generated.product.ResponseText.getDefaultInstance()))
               .setSchemaDescriptor(new ProductServiceMethodDescriptorSupplier("getAnimalParts"))
@@ -127,14 +127,14 @@ public final class ProductServiceGrpc {
 
     /**
      */
-    default void getPackages(com.example.slaughterhousepart3.generated.product.RequestText request,
+    default void getPackages(com.example.slaughterhousepart3.generated.product.RequestId request,
         io.grpc.stub.StreamObserver<com.example.slaughterhousepart3.generated.product.ResponseText> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetPackagesMethod(), responseObserver);
     }
 
     /**
      */
-    default void getAnimalParts(com.example.slaughterhousepart3.generated.product.RequestText request,
+    default void getAnimalParts(com.example.slaughterhousepart3.generated.product.RequestId request,
         io.grpc.stub.StreamObserver<com.example.slaughterhousepart3.generated.product.ResponseText> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetAnimalPartsMethod(), responseObserver);
     }
@@ -169,7 +169,7 @@ public final class ProductServiceGrpc {
 
     /**
      */
-    public void getPackages(com.example.slaughterhousepart3.generated.product.RequestText request,
+    public void getPackages(com.example.slaughterhousepart3.generated.product.RequestId request,
         io.grpc.stub.StreamObserver<com.example.slaughterhousepart3.generated.product.ResponseText> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetPackagesMethod(), getCallOptions()), request, responseObserver);
@@ -177,7 +177,7 @@ public final class ProductServiceGrpc {
 
     /**
      */
-    public void getAnimalParts(com.example.slaughterhousepart3.generated.product.RequestText request,
+    public void getAnimalParts(com.example.slaughterhousepart3.generated.product.RequestId request,
         io.grpc.stub.StreamObserver<com.example.slaughterhousepart3.generated.product.ResponseText> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetAnimalPartsMethod(), getCallOptions()), request, responseObserver);
@@ -202,14 +202,14 @@ public final class ProductServiceGrpc {
 
     /**
      */
-    public com.example.slaughterhousepart3.generated.product.ResponseText getPackages(com.example.slaughterhousepart3.generated.product.RequestText request) {
+    public com.example.slaughterhousepart3.generated.product.ResponseText getPackages(com.example.slaughterhousepart3.generated.product.RequestId request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetPackagesMethod(), getCallOptions(), request);
     }
 
     /**
      */
-    public com.example.slaughterhousepart3.generated.product.ResponseText getAnimalParts(com.example.slaughterhousepart3.generated.product.RequestText request) {
+    public com.example.slaughterhousepart3.generated.product.ResponseText getAnimalParts(com.example.slaughterhousepart3.generated.product.RequestId request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetAnimalPartsMethod(), getCallOptions(), request);
     }
@@ -234,7 +234,7 @@ public final class ProductServiceGrpc {
     /**
      */
     public com.google.common.util.concurrent.ListenableFuture<com.example.slaughterhousepart3.generated.product.ResponseText> getPackages(
-        com.example.slaughterhousepart3.generated.product.RequestText request) {
+        com.example.slaughterhousepart3.generated.product.RequestId request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetPackagesMethod(), getCallOptions()), request);
     }
@@ -242,7 +242,7 @@ public final class ProductServiceGrpc {
     /**
      */
     public com.google.common.util.concurrent.ListenableFuture<com.example.slaughterhousepart3.generated.product.ResponseText> getAnimalParts(
-        com.example.slaughterhousepart3.generated.product.RequestText request) {
+        com.example.slaughterhousepart3.generated.product.RequestId request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetAnimalPartsMethod(), getCallOptions()), request);
     }
@@ -269,11 +269,11 @@ public final class ProductServiceGrpc {
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
         case METHODID_GET_PACKAGES:
-          serviceImpl.getPackages((com.example.slaughterhousepart3.generated.product.RequestText) request,
+          serviceImpl.getPackages((com.example.slaughterhousepart3.generated.product.RequestId) request,
               (io.grpc.stub.StreamObserver<com.example.slaughterhousepart3.generated.product.ResponseText>) responseObserver);
           break;
         case METHODID_GET_ANIMAL_PARTS:
-          serviceImpl.getAnimalParts((com.example.slaughterhousepart3.generated.product.RequestText) request,
+          serviceImpl.getAnimalParts((com.example.slaughterhousepart3.generated.product.RequestId) request,
               (io.grpc.stub.StreamObserver<com.example.slaughterhousepart3.generated.product.ResponseText>) responseObserver);
           break;
         default:
@@ -298,14 +298,14 @@ public final class ProductServiceGrpc {
           getGetPackagesMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
-              com.example.slaughterhousepart3.generated.product.RequestText,
+              com.example.slaughterhousepart3.generated.product.RequestId,
               com.example.slaughterhousepart3.generated.product.ResponseText>(
                 service, METHODID_GET_PACKAGES)))
         .addMethod(
           getGetAnimalPartsMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
-              com.example.slaughterhousepart3.generated.product.RequestText,
+              com.example.slaughterhousepart3.generated.product.RequestId,
               com.example.slaughterhousepart3.generated.product.ResponseText>(
                 service, METHODID_GET_ANIMAL_PARTS)))
         .build();

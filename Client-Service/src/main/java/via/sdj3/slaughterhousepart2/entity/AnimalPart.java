@@ -1,18 +1,26 @@
 package via.sdj3.slaughterhousepart2.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 @Entity
 @Table
 public class AnimalPart {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column
     private int partId;
     @Column
     private String type;
+
+    @ManyToOne
+    @JoinColumn(name = "animal_id")
+    private Animal animal;
+
+    // Getters and setters...
+
+    public Animal getAnimal() {
+        return animal;
+    }
 
     public AnimalPart(int partId, String type) {
         this.partId = partId;

@@ -15,10 +15,10 @@ public final class Product {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_RequestText_descriptor;
+    internal_static_RequestId_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_RequestText_fieldAccessorTable;
+      internal_static_RequestId_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
     internal_static_ResponseText_descriptor;
   static final 
@@ -33,24 +33,24 @@ public final class Product {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\rproduct.proto\"!\n\013RequestText\022\022\n\ninput_" +
-      "text\030\001 \001(\t\"#\n\014ResponseText\022\023\n\013output_tex" +
-      "t\030\001 \001(\t2o\n\016ProductService\022,\n\013getPackages" +
-      "\022\014.RequestText\032\r.ResponseText\"\000\022/\n\016getAn" +
-      "imalParts\022\014.RequestText\032\r.ResponseText\"\000" +
-      "B2\n.via.sdj3.slaughterhousepart2.generat" +
-      "ed.productP\001b\006proto3"
+      "\n\rproduct.proto\"\027\n\tRequestId\022\n\n\002id\030\001 \001(\005" +
+      "\"#\n\014ResponseText\022\023\n\013output_text\030\001 \001(\t2k\n" +
+      "\016ProductService\022*\n\013getPackages\022\n.Request" +
+      "Id\032\r.ResponseText\"\000\022-\n\016getAnimalParts\022\n." +
+      "RequestId\032\r.ResponseText\"\000B2\n.via.sdj3.s" +
+      "laughterhousepart2.generated.productP\001b\006" +
+      "proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
         });
-    internal_static_RequestText_descriptor =
+    internal_static_RequestId_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_RequestText_fieldAccessorTable = new
+    internal_static_RequestId_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_RequestText_descriptor,
-        new java.lang.String[] { "InputText", });
+        internal_static_RequestId_descriptor,
+        new java.lang.String[] { "Id", });
     internal_static_ResponseText_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_ResponseText_fieldAccessorTable = new

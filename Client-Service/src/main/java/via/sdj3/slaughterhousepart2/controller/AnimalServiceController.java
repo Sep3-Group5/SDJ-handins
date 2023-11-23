@@ -19,7 +19,7 @@ public class AnimalServiceController{
   }
 
   @GetMapping("/animals/{registrationNo}")
-  public ResponseEntity<Object> getDrinkById(@PathVariable("registrationNo") int registrationNo){
+  public ResponseEntity<Object> getAnimalById(@PathVariable("registrationNo") int registrationNo){
     Optional<Animal> animal = animalService.getAnimalByRegistrationNo(registrationNo);
     if (!animal.isPresent()){
       return new ResponseEntity<>(HttpStatus.NOT_FOUND);

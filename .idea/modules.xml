@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Client-Service/Client-Service.iml" filepath="$PROJECT_DIR$/Client-Service/Client-Service.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/SDJ-handins.iml" filepath="$PROJECT_DIR$/.idea/SDJ-handins.iml" />
     </modules>
   </component>
